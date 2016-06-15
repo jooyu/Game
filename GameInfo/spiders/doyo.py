@@ -9,6 +9,7 @@ class DoyoSpider(scrapy.Spider):
     start_urls = [
        'http://www.doyo.cn/',
     ]
+
     def parse(self, response):
         """
         The lines below is a spider contract. For more info see:
