@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for GameInfo project
+# Scrapy settings for Game project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'GameInfo'
+BOT_NAME = 'Game'
 
-SPIDER_MODULES = ['GameInfo.spiders']
-NEWSPIDER_MODULE = 'GameInfo.spiders'
+SPIDER_MODULES = ['Game.spiders']
+NEWSPIDER_MODULE = 'Game.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'GameInfo (+http://www.yourdomain.com)'
+#USER_AGENT = 'Game (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'GameInfo.middlewares.MyCustomSpiderMiddleware': 543,
+#    'Game.middlewares.MyCustomSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'GameInfo.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'Game.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'GameInfo.pipelines.SomePipeline': 300,
+#    'Game.pipelines.SomePipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -88,9 +88,3 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-
-SPIDER_MODULES = ['GameInfo.spiders']
-NEWSPIDER_MODULE = 'GameInfo.spiders'
-DEFAULT_ITEM_CLASS = 'GameInfo.items.Website'
-
-ITEM_PIPELINES = {'GameInfo.pipelines.FilterWordsPipeline': 1}

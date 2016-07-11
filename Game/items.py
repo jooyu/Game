@@ -7,10 +7,10 @@
 
 import scrapy
 
-class GameInfoItem(scrapy.Item):
+
+class GameItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field
-    # 标题 url 二级url
+    # name = scrapy.Field()
     hotTitle=scrapy.Field()
     url=scrapy.Field()
     pass

@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from scrapy.spiders import Spider
 from scrapy.selector import Selector
-from GameInfo.items import GameInfoItem
+from Game.items import GameItem
 class DoyoSpider(scrapy.Spider):
     name = "doyo"
-    allowed_domains = ["doyo.cn"]
-    start_urls = [
-       'http://www.doyo.cn/',
-    ]
+    allowed_domains = ["www.doyo.cn"]
+    start_urls = (
+        'http://www.doyo.cn/',
+    )
 
     def parse(self, response):
         """
@@ -19,13 +18,14 @@ class DoyoSpider(scrapy.Spider):
         @scrapes name
         """
         sel = Selector(response)
-        sites = sel.xpath('//div[@class="tl"]')
+
+        sites = sel.xpath('//div[@class="tl"]//ul//li')
         items = []
 
         for site in sites:
-            item = GameInfoItem()
-            item['hotTitle'] = site.xpath('a/text()').extract()
-            item['url'] = site.xpath('a/@href').extract()
+            item = GameItem()
+            item['hotTitle'] =site.xpath('a/text()')
+            item['url'] =site.xpath('a/@href').extract()
            # item['description'] = site.xpath('text()').re('-\s[^\n]*\\r')
             items.append(item)
 
