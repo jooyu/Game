@@ -24,8 +24,9 @@ class DoyoSpider(scrapy.Spider):
 
         for site in sites:
             item = GameItem()
-            item['hotTitle'] =site.xpath('a/text()')
-            item['url'] =site.xpath('a/@href').extract()
+            item['tag']=site.xpath('span/text()').extract()[0].encode('utf-8')
+            item['hotTitle'] =site.xpath('a/text()').extract()[0].encode('utf-8')
+            item['url'] =site.xpath('a/@href').extract()[0].encode('utf-8')
            # item['description'] = site.xpath('text()').re('-\s[^\n]*\\r')
             items.append(item)
 
