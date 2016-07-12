@@ -88,3 +88,9 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+# start MySQL database configure setting
+MYSQL_HOST = '192.168.23.135'
+MYSQL_DBNAME = 'game'
+MYSQL_USER = 'root'
+MYSQL_PASSWD = '123456'
